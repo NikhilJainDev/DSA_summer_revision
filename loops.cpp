@@ -51,16 +51,20 @@ int SumofDigits(int num){
     return sum;
 }
 
+bool isArmstrong(){
+
+}
+
 int main(){
 
-    // cout<<ReverseDigit(1234);
-    // cout<<endl;
-    // cout<<CountDigit(88795);
+    cout<<ReverseDigit(1234); cout<<endl;
+    cout<<CountDigit(88795);
 
-    // cout<<isPalindrome(1234);
-    // cout<<isPalindrome(1331);
+    cout<<isPalindrome(1234); cout<<endl;
+    cout<<isPalindrome(1331);
 
-    cout<<SumofDigits(1234);
+    cout<<SumofDigits(1234); cout<<endl;
+    cout<<SumofDigits(55647);
 
     
 
