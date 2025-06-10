@@ -51,8 +51,18 @@ int SumofDigits(int num){
     return sum;
 }
 
-bool isArmstrong(){
+// check that is prime or not 
+bool isPrime(int digits){
 
+    if(digits < 2){
+        return false;
+    }
+    for(int i=2; i<digits; i++){
+        if(digits % i == 0){
+            return false;
+        }
+    }
+    return true;
 }
 
 int main(){
@@ -66,6 +76,10 @@ int main(){
     cout<<SumofDigits(1234); cout<<endl;
     cout<<SumofDigits(55647);
 
+    cout<<endl;
+
+    cout<<isPrime(23);
+    cout<<isPrime(28);
     
 
     return 0;
