@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 // Ques 1) Check that the number is in palindrome or not 
 
@@ -81,6 +82,35 @@ int main(){
     cout<<isPrime(23);
     cout<<isPrime(28);
     
+cout<<" ---------------------- "<<endl;
+cout<<endl;
+    // TYpes of Loops 
+     // For Each Loop 
+    vector<int> arr = {1,2,3,4,5,6,7,8,9};
+    for(int el : arr){
+        cout<<el<<endl;
+    }
+cout<<endl;
+    for(int i=2; i<=5; i++){
+        cout<<i<<" ";
+    }
+cout<<endl;
+    // Use of Break and Continue Statements 
+
+    for(int x = 1; x<=15; x++){
+        if(x == 9){
+            break;
+        }
+        cout<<x<<endl;
+    }
+    cout<<endl;
+    // continue Statement 
+
+    for(int p = 11; p<=26; p++){
+        if(p % 2 != 0){ // odd number only 
+            cout<<p<<" ";
+        }
+    }
 
     return 0;
 }
