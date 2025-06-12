@@ -18,10 +18,22 @@ int sum_N_Numbers(int n){
         return n + sum_N_Numbers(n-1);
     }
 }
+
+// Recursive Fibonacci 
+int fib(int num){
+    if(num  == 0 || num == 1){
+        return num;
+    }
+    else{
+        return fib(num - 1) + fib(num - 2);
+    }
+}
 int main(){
     cout<< factorial(5);
     cout<<endl;
     cout<< sum_N_Numbers(10); cout<<endl;
     cout<<sum_N_Numbers(20);
+    cout<<endl;
+    cout<<fib(7);
 return 0;
 }
