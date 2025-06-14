@@ -1,6 +1,10 @@
 #include<iostream>
+#include<cstring>
+#include<vector>
 using namespace std;
-int main()
-{
+// Recursive Functions 
+
+int main(){
+
 return 0;
 }
