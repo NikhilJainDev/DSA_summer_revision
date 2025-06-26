@@ -25,6 +25,8 @@ int main(){
 
     cout<<endl;
 
+    // Not an Optimal Approach We haven't use extra Array only solve using this given array 
+    
     int ans[n][n];
     // Rotate by 90 degree 
      for(int i=0; i<n; i++){
