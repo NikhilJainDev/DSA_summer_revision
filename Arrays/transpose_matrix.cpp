@@ -25,7 +25,22 @@ int main(){
     }
 
     // Applying the transpose logic 
-   
 
+    int transpose_matrix[column][row];
+
+    for(int i=0; i<column; i++){
+        for(int j=0; j<row; j++){
+            transpose_matrix[i][j] = matrix[j][i];
+        }
+    }
+
+    cout<<" Transpose matrix is : "<<endl;
+    // Printing the transpose Matrix 
+    for(int i=0; i<column; i++){
+        for(int j=0; j<row; j++){
+            cout<<transpose_matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
     return 0;
 }
