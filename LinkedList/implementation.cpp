@@ -62,7 +62,21 @@ class List{
     }
 
     // Pop Back Function in Linked list 
-    
+    void pop_back(){
+        if(head == NULL){
+            cout<<" Linked List is Empty "<<endl;
+        }
+        else{
+            Node * temp = head;
+            // finding previous node 
+            while(temp->next != tail){
+                temp = temp->next;
+            }
+           temp-> next = NULL;  // break connection 
+           delete tail;
+           
+        }
+    }
 
     void PrintLL(){
     Node * temp = head;
@@ -89,6 +103,10 @@ int main(){
     ll.PrintLL();
 
     ll.pop_front();
+
+    ll.PrintLL();
+
+    ll.pop_back();
 
     ll.PrintLL();
 
