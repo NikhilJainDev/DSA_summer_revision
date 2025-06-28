@@ -33,7 +33,7 @@ class List{
             newNode->next = head;
             head = newNode;
         }
-    }
+    } 
 
     // Push Back Function 
     void push_back(int value){
@@ -74,7 +74,7 @@ class List{
             }
            temp-> next = NULL;  // break connection 
            delete tail;
-           
+           tail = temp;
         }
     }
 
@@ -95,20 +95,6 @@ int main(){
     ll.push_front(10);
     ll.push_front(20);
     ll.push_front(30);
-    
-    ll.PrintLL();
-
-    ll.push_back(60);
 
     ll.PrintLL();
-
-    ll.pop_front();
-
-    ll.PrintLL();
-
-    ll.pop_back();
-
-    ll.PrintLL();
-
-    return 0;
 }
