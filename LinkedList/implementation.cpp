@@ -8,7 +8,7 @@ class Node{
 
     Node(int value){
         data = value;
-        next = NULL; 
+        next = NULL;  // it stores the address 
     }
 
 };
@@ -22,15 +22,39 @@ class List{
         head = tail = NULL;
     }
 
+    // Push Front Function 
     void push_front(int value){
         Node * newNode = new Node(value);
         if(head == NULL){
-            head = newNode;
+            head = tail = newNode;
             return;
         }
         else{
             newNode->next = head;
             head = newNode;
+        }
+    }
+
+    // Push Back Function 
+    void push_back(int value){
+        Node * newNode = new Node(value);
+        if(head == NULL){
+            head = tail =  newNode;
+            return;
+        }
+        else{
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    // Pop Front Function in Linked List 
+    void pop_front(){
+        if(head == NULL){
+            cout<<" Linked List is Empty "<<endl;
+        }
+        else{
+
         }
     }
 
@@ -40,23 +64,22 @@ class List{
         cout<< temp->data<<" ";
         temp = temp->next;
     }
+    cout<<endl;
 }
 
 };
 
 
 int main(){
-List ll;
-ll.push_front(11);
-ll.push_front(21);
-ll.push_front(51);
-ll.push_front(101);
+    List ll;
+     ll.push_front(10);
+    ll.push_front(20);
+    ll.push_front(25);
+    ll.PrintLL();
 
-ll.PrintLL();
-cout<<endl;
-
-ll.push_front(523);
-ll.PrintLL();
+    ll.push_back(60);
+    ll.PrintLL();
+   ll.pop_front();
 
     return 0;
 }
