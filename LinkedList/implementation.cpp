@@ -54,9 +54,15 @@ class List{
             cout<<" Linked List is Empty "<<endl;
         }
         else{
-
+            Node * temp = head;
+            head = head->next;
+            temp->next = NULL; // breaking connection 
+            delete temp; // delete starting node from memory 
         }
     }
+
+    // Pop Back Function in Linked list 
+    
 
     void PrintLL(){
     Node * temp = head;
@@ -72,14 +78,19 @@ class List{
 
 int main(){
     List ll;
-     ll.push_front(10);
+    ll.push_front(10);
     ll.push_front(20);
-    ll.push_front(25);
+    ll.push_front(30);
+    
     ll.PrintLL();
 
     ll.push_back(60);
+
     ll.PrintLL();
-   ll.pop_front();
+
+    ll.pop_front();
+
+    ll.PrintLL();
 
     return 0;
 }
