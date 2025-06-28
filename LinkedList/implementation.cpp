@@ -90,6 +90,10 @@ class List{
         }
         Node * temp = head;
         for(int i=0; i<pos - 1; i++){
+            if(temp == NULL){
+                cout<<" Invalid Position "<<endl;
+                return;
+            }
             temp = temp->next;
         }
 
@@ -98,6 +102,22 @@ class List{
         temp->next = newNode;
 
     }
+
+    // Search in a Linkedlist 
+    int search(int target){
+        Node * temp = head;
+        int idx = 0;
+        while(temp != NULL){
+            if(temp->data == target){
+               cout<<"Index is : "<<" "; return idx;
+            }
+            temp = temp->next;
+            idx = idx + 1;
+        }
+        cout<<endl;
+        return -1;
+    }
+
 
     void PrintLL(){
     Node * temp = head;
@@ -121,4 +141,12 @@ int main(){
 
     ll.insert(51, 1);
     ll.PrintLL();
+    ll.push_back(18);
+    ll.push_front(22);
+    ll.PrintLL();
+
+    cout<< ll.search(20);
+    cout<< ll.search(98);
+
+
 }
