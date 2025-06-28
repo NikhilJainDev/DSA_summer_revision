@@ -78,6 +78,27 @@ class List{
         }
     }
 
+    // Insert at any position of Linked List 
+    void insert(int value, int pos){
+        if(pos < 0){
+            cout<<" Invalid Position "<<endl;
+            return;
+        }
+        if(pos == 0){
+            push_front(value);
+            return;
+        }
+        Node * temp = head;
+        for(int i=0; i<pos - 1; i++){
+            temp = temp->next;
+        }
+
+        Node * newNode = new Node(value);
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+    }
+
     void PrintLL(){
     Node * temp = head;
     while(temp != NULL){
@@ -96,5 +117,8 @@ int main(){
     ll.push_front(20);
     ll.push_front(30);
 
+    ll.PrintLL();
+
+    ll.insert(51, 1);
     ll.PrintLL();
 }
