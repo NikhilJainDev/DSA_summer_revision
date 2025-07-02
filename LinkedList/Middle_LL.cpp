@@ -13,6 +13,8 @@ class List{
 
 int main(){
 
+    // Slow Fast Pointer Approach , Solved on Leetcode 876 Problem Number 
+
     List ll;
 
     return 0;
